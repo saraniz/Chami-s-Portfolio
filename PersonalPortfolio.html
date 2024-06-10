@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<title>Personal Portfolio Website Design</title>
+	<style>
+		*{
+			color:white;
+			margin:0;
+			padding:0;
+			box-sizing:border-box;	
+			font-family:'poppins',sans-serif;
+			text-decoration:none;
+			scroll-behavior:smooth;
+		}
+		body{
+			background-image:url("Screenshot (637).png");
+			min-width:200vh;	
+		}
+		.nav{
+			background-color:lightskyblue;
+			overflow:hidden;
+			text-align:right;
+			padding:18px;		
+		}
+		.nav a{
+			color:black;
+			font-size:30px;
+			font-weight:bold;
+			font-family:'poppins';
+			text-decoration:none;
+			margin:40px;
+		}
+		.nav a:hover,
+		.nav a.active{
+			color:red;
+		}
+		.img img{
+			width:300px;
+			border-radius:150px;
+		}
+		img{		
+			margin-left:80px;
+		}
+		#hp{
+			float:right;
+		}
+		.topic{
+			left:15%;
+			top:30%;
+			right:15%;
+			position:absolute;
+			padding:30px;
+        }
+		.topic h1{			
+			margin-bottom:10px;
+			font-weight:bold;
+			font-size:30px;
+        }
+		.topic h2{
+			color:aqua;
+			margin-bottom:10px;
+			font-family:sans-serif;
+		}
+		.topic p{
+			margin-top:10px;
+			font-family:sans-serifserif;
+			line-height:1.3;
+			font-size:18px;
+			text-align:justify;
+		}
+		#about{
+			top:120%;
+			position:absolute;
+			
+		}
+		#about h1{
+			text-align:center;
+			font-weight:bold;
+			color:aqua;
+			font-size:35px;		
+		}	
+		#about p.content{
+			margin-top:10%;
+			line-height:1.3;
+			font-size:20px;
+			text-align:justify;
+			font-family:sans-serif;
+			margin-bottom:10%;	
+		}
+		#about h1 span{
+			color:white;
+		}
+		.img1 img{
+			width:200px;
+			border-radius:100px;
+			margin-top:10%;
+			margin-right:100px;
+		}
+		
+		#hp1{
+			float:left;
+		}				
+		.details div{
+			border:.2rem solid white;
+			border-radius:.6rem;
+			border-width:3px;			
+			margin:10px;
+			padding:10px;
+			font-size:18px;
+			font-family:sans-serif;
+			display:inline-flex;
+			white-space:pre;
+		}
+		.details span{
+			color:aqua;			
+		}
+		.details{
+			margin:10px;
+			padding-bottom:20px;
+			padding-top:20px;
+			padding-left:10%;
+			width:50px;
+	
+		}
+		#skills{			
+			top:110%;
+			position:absolute;
+			
+		}
+		#skills h1{
+			
+			text-align:center;
+			font-weight:bold;
+			color:aqua;
+			font-size:35px;
+		}
+		#skills h1 span{
+			color:white;
+		}
+		#skills h2{
+			color:aqua;
+			padding-top:70px;
+			padding-bottom:20px;
+			text-decoration:underline;
+		}
+		#skills h4{
+			font-family:sans-serifserif;
+			font-size:20px;
+			padding-top:30px;
+			font-weight:bold;
+		}
+		.edu{
+			padding-top:30px;
+			padding-bottom:20px;
+			font-size:20px;
+			font-family:sans-serifserif;
+			color:skyblue;
+		}
+		.edu span{
+			font-size:15px;
+			font-family:sans-serifserif;
+			white-space:pre;
+			color:skyblue;
+		}
+		h3{
+			display:inline-flex;
+			padding-top:30px;
+			padding-bottom:10px;			
+		}		
+		.box{
+			float:left;
+			width:50%;
+			padding:50px;
+		}	
+		.ol{
+			content:"";
+			clear:both;
+			display:table;
+		}
+		.box p{
+			margin:10px;
+		}
+		ul{
+			list-style-type:none;
+			padding-left:40px;
+			padding-top:20px;
+			padding-bottom:20px;
+			padding-left:5px;
+		}
+		li{
+			margin:10px;
+			padding-left:60px;
+			
+		}
+		ul span{
+			white-space:pre;
+		}
+		#contact{
+			left:20%;
+			top:100%;
+			position:absolute;
+		}
+		#contact h1{
+			text-align:center;
+			font-weight:bold;
+			color:aqua;
+			font-size:35px;
+			padding-top:100px;
+		}
+		#conatact h1 span{
+			color:white;
+		}
+		.pro h5{
+			font-size:20px;
+			line-height:1.3;
+			margin-bottom:5px;
+			padding-top:70px;
+		}
+		.pro li a{
+			text-decoration:underline;
+			color:skyblue;
+		}
+		.course{  
+			padding:40px;
+			font-size:18px;
+		}
+		.course span{
+			color:skyblue;
+		}
+		.icon{
+			margin:50px 0 40px;
+			text-align:center;
+		}
+		.icon a{
+			display:inline-flex;
+			width:40px;
+			height:40px;
+			background:transparent;
+			border:2px solid #fff;
+			border-radius:50%;
+			font-size:27px;
+			color:aqua;
+			text-decoration:none;
+			margin-left:12px;
+			padding-top:5px;
+			justify-content:center;
+		}
+		.details1 div{
+			color:aqua;
+			margin:10px;
+			padding:10px;
+			font-size:18px;
+			font-family:sans-serif;
+			display:flex;
+			white-space:pre;
+		}
+		.details1 span{
+			color:white;
+			white-space:pre;			
+		}
+		.details1{
+			margin:10px;
+			padding-bottom:20px;
+			padding-top:20px;
+			padding-left:5%;	
+			padding-bottom:30%;
+		}
+		.icon-home{
+			margin:50px 0 40px;
+			padding-left:15%;
+		}
+		.icon-home a{
+			display:inline-flex;
+			width:40px;
+			height:40px;
+			background:transparent;
+			border:2px solid #fff;
+			border-radius:50%;
+			font-size:27px;
+			color:aqua;
+			text-decoration:none;
+			margin-left:12px;
+			padding-top:5px;
+			justify-content:center;
+		}
+		.details2 div{
+			color:aqua;
+			margin:10px;
+			padding:10px;
+			font-size:18px;
+			font-family:sans-serif;
+			display:flex;
+			white-space:pre;
+		}
+		.details2 span{
+			color:white;
+			white-space:pre;			
+		}
+		.details2{
+			margin:10px;
+			padding-bottom:20px;
+			padding-top:2px;
+		}			
+		.code,code1 {
+			display:flex;
+			flex-wrap:wrap;
+			gap:50px;
+		}
+		.skills-box h5{
+			font-size:20px;
+			line-height:1.3;
+			margin-bottom:5px;
+			padding-top:50px;	
+			padding-bottom:8%;
+		}			
+		.code span span{
+			font-size:40px;
+			padding-bottom:2px;
+		}
+		.code span{			
+			justify-content:center;
+			text-align:center;
+			width:8rem;
+			height:8rem;
+			font-weight:400;
+			font-size:18px;		
+			padding-bottom:12px;		
+		}	
+		.code div{
+			border:.2rem solid white;
+			border-radius:.6rem;
+			border-width:3px;
+			gap:20px;
+			width:130px;
+			height:90px;
+			padding:12px;
+		}		
+		.skills-box1 h5{
+			font-size:20px;
+			line-height:1.3;
+			margin-bottom:5px;
+			padding-top:100px;	
+		}
+		.code1 span{
+			display:inline-flex;
+			flex-direction:column;
+			justify-content:center;
+			text-align:center;
+			width:12rem;
+			height:8rem;
+			font-weight:400;
+			font-size:18px;
+			padding-top:8%;
+			
+		}	
+		.code1 span span{
+			font-size:20px;
+			padding-left:20px;
+		}	
+		.change div{
+			background-image:url('Screenshot (658).png');
+		}
+	</styl
+	</style>
+</head>
+
+<body>
+		
+	<div class="menu" id="menu-icon"></div>
+	
+	<div class="nav">
+		<a href="#home">Home</a>
+		<a href="#about" >About</a>
+		<a href="#skills">Skills</a>
+		<a href="#contact">Contact</a>
+	</div>
+	
+	<section id="home" class="topic">
+	
+		<div class="img">
+			<img src="img.jpeg" alt="" id="hp"/>
+		</div>
+		<h1>Chami Dilshika</h1>
+		<h2>Junior Web Developer</h2>
+		<p>I am web developer who is passionate about building awesome websites and applications.
+		I have learned and used HTML and CSS. Currently, I am learning Javascript. On personal
+		level, I am hard working. </p>
+		
+		<div class="icon-home">
+				<a href="https://www.facebook.com/profile.php?id=100087372611241&mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+				<a href="https://www.instagram.com/chami_dil21?igsh=MTlnY3kxaXE5dXlkbQ=="><i class='bx bxl-instagram' ></i></a>
+				<a href="https://www.tiktok.com/@chami.dilshika?_t=8n3ejFnEO2q&_r=1"><i class='bx bxl-tiktok' ></i></a>
+				<a href="https://wa.link/20kia1"><i class='bx bxl-whatsapp'></i></a>
+		</div>
+			
+			<div class="details2">
+				<div>Contact : <span>+94 779769050</span><span>             <span>Email : <span>chamidilshika7@gmail.com</span></div>
+			</div>
+			
+		<section id="about">
+		<div>
+			<h1>About <span>Me</span></h1>
+			<div class="img1">
+				<img src="img.jpeg" alt="" id="hp1"/>
+			</div>
+			<div>
+				<p class="content">I am an undergraduate student in software engineering at University of Sri Jayawardhanapura.
+				Their curriculum includes courses on programming, algorithms, software design, artificial 
+				interlligence and web technology. The program combines theoretical knowledge with practical 
+				experience through projects and labs.	 Students develop problem-solving skills, teamwork,
+				and communication abilities, preparing them for careers in the software industry or further
+				studies. If you have any questions, you can conatact with me.</p>
+	
+			</div>
+		</div>
+	
+			<div class="details">
+				
+					<div><span>Date of Birth :</span> Sep 25, 2002</div>
+					<div><span>Gender :</span> Female</div>
+	                <div><span>Age :</span> 21 years old</div>
+					<div><span>Maritial Status</span> : Unmarried</div>			
+					<div><span>Nationality :</span> Sinhala</div>					
+					<div><span>Religion :</span> Biddhist</div>
+					<div><span>Profession :</span> Undergraduate</div>
+					<div><span>Address :</span> Meegaha Koratuwa, Mirissa, North, Mirissa</div>					
+					<div><span>Contact :</span> +94 779769050</div>
+					<div><span>Email :</span> chamidilshika7@gmail.com</div>
+								   
+			</div>
+
+		<section id="skills">	
+	
+		<div>
+		<div class="change">
+			<h1> <span>My</span> Skills</h1>		
+			<h2>Education and Certifications</h2>			
+			<h4>2024-present</h4>			
+				<p class="edu">Software Engineering at University of Sri Jayawardhapura. 
+				<span>(Undergraduate in Bachelor of Computing(Hons) in Software Engineering)</span></p>
+			<h4>2018-2021</h4>
+			<h3>Studied at Sujatha Vidyalaya, Matara</h3>
+				<p class="edu">Passed G.C.E.Ordinary Level Examination</p>
+				
+				<div class="ol">
+					<div class="box">
+						<p>Mathematics</p>
+						<p>Science</p>
+						<p>Buddhist</p>
+						<p>English</p>
+						<p>Sinhala</p>
+						<p>History</p>
+						<p>ICT</p>
+						<p>Commerce</p>
+						<p>Sinhala Literature</p>
+					</div>
+					<div class="box">
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+						<p>A</p>
+					</div>				
+			    </div>
+			
+			<h3>SITEC Education Center</h3>
+				<div class="course">
+					<p>I have successfully completed the four months course of <span>Java Programming Course</span>.</p>
+				</div>
+			<h4>2013-2018</h4>
+			<h3>Mahamaya Girl's School, Matara</h3>
+				<p class="edu">Passed G.C.E.Advanced Level Examination</p>
+				<div>
+					<ul>
+						<li>Combined Maths<span>           A</span></li>
+						<li>Physics<span>		              B</span></li>
+						<li>Chemistry<span>                      B</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="skills-box">
+					<h5>Coding</h5>
+					<div class="code">
+						
+						<div><span><span><i class='bx bxl-c-plus-plus' ></i></span>C/C++</span></div>
+						<div><span><span><i class='bx bxl-java' ></i></span>Java</span></div>
+						<div><span><span><i class='bx bxl-html5'></i></span>HTML</span></div>
+						<div><span><span><i class='bx bxl-css3' ></i></span>CSS</span></div>
+						<div><span><span><i class='bx bxl-python' ></i></span>Python</span></div>
+						
+					</div>
+			</div>
+		</div>
+			<div class="skills-box1">
+					<h5>Design</h5>
+					<div class="code1">
+						
+						<span><img width="48" height="48" src="https://img.icons8.com/fluency/48/canva.png" alt="canva"/><span>Canva</span></span>
+						<span><img width="48" height="48" src="https://img.icons8.com/fluency/48/adobe-photoshop.png" alt="adobe-photoshop"/><span>Photoshop</span></span>
+				
+					</div>
+				</div>
+			</div>
+					
+			
+			<div class="pro">
+				<h5>My Projects</h5>
+				<ul>
+					<li><a href="https://github.com/Chamidilshika/Puzzle">Click here to view Puzzle Game</a></li>
+					<li><a href="https://github.com/Chamidilshika/project2">Click here to view Calculator</a></li>
+					<li><a href="https://github.com/Chamidilshika/LibrarySystem">Click here to view Library System</a></li>
+				</ul>
+			</div>
+		</div>	
+		
+		<section id="contact">
+		<div>	
+			<h1>Contact<span> Us</span></h1>
+			<div class="icon">
+				<a href="https://www.facebook.com/profile.php?id=100087372611241&mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+				<a href="https://www.instagram.com/chami_dil21?igsh=MTlnY3kxaXE5dXlkbQ=="><i class='bx bxl-instagram' ></i></a>
+				<a href="https://www.tiktok.com/@chami.dilshika?_t=8n3ejFnEO2q&_r=1"><i class='bx bxl-tiktok' ></i></a>
+				<a href="https://wa.link/20kia1"><i class='bx bxl-whatsapp'></i></a>
+			</div>
+			
+			<div class="details1">
+				<div>Contact : <span>+94 779769050</span><span>             <span>Email : <span>chamidilshika7@gmail.com</span></div>
+			</div>
+		</div>
+		
+		</section>
+		</section>
+	</section>
+		
+	</section>
+
+</body>
+</html>
+
+
+
